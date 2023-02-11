@@ -267,6 +267,8 @@ x-ui restart
 
 در غیر اینصورت مسئولیت شرعیش گردن خودتونه، خودتون میدونید و خدای خودتون
 
+اگه مشکلی داشتید میتونید به تلگرام من به آیدی مقابل پیام بدید [MimSad_tz@](https://t.me/MimSad_tz)
+
 ---
 
 <div align="center"><img src="https://github.com/Eilllia/Saturn/blob/main/Donate.png" width="400" textAlign="center"/>
