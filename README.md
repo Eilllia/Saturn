@@ -186,10 +186,16 @@ curl https://get.acme.sh | sh
 
 > And the full chain certs is there: /root/.acme.sh/host.mydomain.com/fullchain.cer
 
-```bash
-systemctl restart x-ui
-```
+و در آخر این کد رو بزنید، به جای `host.mydomain.com` همون ساب دامین خودمون رو بزارید:
 
 ```bash
-systemctl restart x-ui
+~/.acme.sh/acme.sh --installcert -d host.mydomain.com --key-file /root/private.key --fullchain-file /root/cert.crt
 ```
+
+هوووف تموم شد! این کد سوسکی هم بزنید که V2ray یه ریست بشه بفهمه چی به چیه:
+
+```bash
+x-ui restart
+```
+
+
