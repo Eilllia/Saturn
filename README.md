@@ -134,10 +134,57 @@ systemctl restart x-ui
 
 <img src="https://github.com/Eilllia/Saturn/blob/main/cpanel-step2.png" width="400"/>
 
-3. حالا در قسمت `Name` یک ساب دامین از دامین خودتون بنویسید مثلا `vps.xyz.com` ، توجه کنید حتما جای xyz.com نام دامنه خودتون رو بزارید و به جای vps نام ساب دامین دلخواهتون، این آدرس پنل و کانفیگ هاتون میشه
-
-4. و در قسمت `Address` آدرس آیپی سرورتون رو وارد کنید تا یک رکورد برای ساب دامین شما ایجاد بشه و شما رو مستقیم وصل کنه به سرور، این کار برای تنظیم tls ضروریه، تبی که باز میشه رو میتونید توی عکس ببینید:
+3. حالا در قسمت `Name` یک ساب دامین از دامین خودتون بنویسید مثلا `vps.xyz.com` ، توجه کنید حتما جای xyz.com نام دامنه خودتون رو بزارید و به جای vps نام ساب دامین دلخواهتون، این آدرس پنل و کانفیگ هاتون میشه  و در قسمت `Address` آدرس آیپی سرورتون رو وارد کنید و اد رکرود رو بزنید تا یک رکورد برای ساب دامین شما ایجاد بشه و شما رو مستقیم وصل کنه به سرور، این کار برای تنظیم tls ضروریه، تبی که باز میشه رو میتونید توی عکس ببینید:
 
 <img src="https://github.com/Eilllia/Saturn/blob/main/cpanel-step3.png" width="400"/>
 
 و تمام، الان باید آدرس ساب دامینتون رو که سرچ میکنید به همراه پورت پنلتون وا بشه برای مثال `vps.xyz.com:54321`  (جای vps.xyz.com آدرس ساب دامین خودتون رو بزارید) 
+
+
+
+---
+
+### قدم 3 | دریافت و نصب SSL Certificate
+
+آقا سرتونو درد نیارم، قدم به قدم هر چی من میزنم شما هم بزنید، اوکی؟ بزن بریم:
+
+```bash
+apt update && apt upgrade -y
+```
+
+```bash
+apt install curl socat -y
+```
+
+```bash
+curl https://get.acme.sh | sh
+```
+
+```bash
+~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
+```
+
+اینجا به جای `xyz@abc.com` ایمیل خودتون رو وارد کنید:
+
+```bash
+~/.acme.sh/acme.sh --register-account -m xyz@abc.com
+```
+
+اینجا هم به جای `host.mydomain.com`  آدرس ساب دامین رکورد داده شدمون رو بنویسید:
+
+```bash
+~/.acme.sh/acme.sh --issue -d host.mydomain.com --standalone
+```
+
+> Your cert is in: /root/.acme.sh/host.mydomain.com/host.mydomain.com.cer
+Your cert key is in: /root/.acme.sh/host.mydomain.com/host.mydomain.com.key
+The intermediate CA cert is in: /root/.acme.sh/host.mydomain.com/ca.cer
+And the full chain certs is there: /root/.acme.sh/host.mydomain.com/fullchain.cer
+
+```bash
+systemctl restart x-ui
+```
+
+```bash
+systemctl restart x-ui
+```
