@@ -176,10 +176,15 @@ curl https://get.acme.sh | sh
 ~/.acme.sh/acme.sh --issue -d host.mydomain.com --standalone
 ```
 
+اینا هم برای اینکه داشته باشید خوبه نیازی به نوشتن اینا نیست اینا اطلاعات سرتیفیکیت شماست (به جای `host.mydomain.com`  آدرس ساب دامین رکورد داده شده رو بزارید، البته نیازتون نمیشه صرفا جهت دونستن گذاشتم):
+
 > Your cert is in: /root/.acme.sh/host.mydomain.com/host.mydomain.com.cer
-Your cert key is in: /root/.acme.sh/host.mydomain.com/host.mydomain.com.key
-The intermediate CA cert is in: /root/.acme.sh/host.mydomain.com/ca.cer
-And the full chain certs is there: /root/.acme.sh/host.mydomain.com/fullchain.cer
+
+> Your cert key is in: /root/.acme.sh/host.mydomain.com/host.mydomain.com.key
+
+> The intermediate CA cert is in: /root/.acme.sh/host.mydomain.com/ca.cer
+
+> And the full chain certs is there: /root/.acme.sh/host.mydomain.com/fullchain.cer
 
 ```bash
 systemctl restart x-ui
