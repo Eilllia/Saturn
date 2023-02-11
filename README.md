@@ -70,3 +70,18 @@ ssh root@127.0.0.1
 نصب V2ray خیلی آسونه و به راحتی با چند خط کدی که میگم بزنید میتونید سرویس رو راه اندازی کنید.
 
 خب بریم برای نصب V2ray
+
+اول از همه باید سرورتون رو به روز کنید که با کامند های زیر میتونید اینکارو انجام بدید اول آپدیت:
+
+```bash
+sudo apt-get update
+```
+بعدشم آپگرید:
+```bash
+sudo apt-get upgrade
+```
+
+خب حالا سرورمون آماده نصب V2ray عه، بیاید با کامند های زیر فضا رو معطر به V2ray کنیم!
+```bash
+bash <(curl -Ls https://raw.githubusercontent.com/tshipenchko/x-ui-en/master/install.sh)
+```
