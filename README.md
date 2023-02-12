@@ -1,4 +1,4 @@
-<div align="center"><img src="https://github.com/Eilllia/Saturn/blob/main/Saturn.png" height="250" textAlign="center"/></div>
+<div align="center"><img src="https://github.com/Eilllia/Saturn/blob/main/Saturn.png" height="220" textAlign="center"/></div>
 
 <h1 align="center">Saturn</h1>
 <h3 align="center">Saturn VPN - How to bypass filtering?</h3>
@@ -91,7 +91,7 @@ sudo apt-get upgrade
 
 خب حالا سرورمون آماده نصب V2ray عه، بیاید با کامند های زیر فضا رو معطر به V2ray کنیم!
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/tshipenchko/x-ui-en/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 ```
 
 ```bash
